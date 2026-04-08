@@ -124,6 +124,10 @@ python3 gpu_hash_benchmark/gpu_hash_benchmark.py \
 
 Below is an example run of the HIP C++ hash benchmark on an AMD Instinct MI300X:
 
+```bash
+./build/gpu_hash_benchmark_hip_main --run 10 --iterations 10000 --hash_rounds 10000
+```
+
 ```
 ============================================================
 GPU VECTOR HASH KERNEL MICROBENCHMARK (HIP/ROCm)
