@@ -120,6 +120,67 @@ python3 gpu_hash_benchmark/gpu_hash_benchmark.py \
 ./build/gpu_hash_benchmark_hip_main --help
 ```
 
+## Example Output
+
+Below is an example run of the HIP C++ hash benchmark on an AMD Instinct MI300X:
+
+```
+============================================================
+GPU VECTOR HASH KERNEL MICROBENCHMARK (HIP/ROCm)
+============================================================
+Device: AMD Instinct MI300X
+  Compute Capability: 9.4
+  Total Memory: 191.98 GB
+  Multiprocessors (CUs): 304
+  Max Threads per Block: 1024
+  Warp Size: 64
+
+Benchmark Configuration:
+  Num Blocks: 1
+  Threads per Block: 1024
+  Total Elements: 1024
+  Iterations per Kernel: 10000
+  Hash Rounds per Element: 10000
+  Benchmark Runs: 10
+  Theoretical CU Usage: 1/304
+  Backend: HIP/ROCm
+
+Running benchmark...
+  Run 1/10: 4343.667 ms
+  Run 2/10: 4344.608 ms
+  Run 3/10: 4348.495 ms
+  Run 4/10: 4342.410 ms
+  Run 5/10: 4344.577 ms
+  Run 6/10: 4344.157 ms
+  Run 7/10: 4342.589 ms
+  Run 8/10: 4343.869 ms
+  Run 9/10: 4343.765 ms
+  Run 10/10: 4343.050 ms
+
+============================================================
+BENCHMARK RESULTS
+============================================================
+Device: AMD Instinct MI300X
+Configuration:
+  Blocks: 1 (CUs available: 304)
+  Threads/Block: 256
+  Vector Size: 1024
+  Iterations: 10000
+  Hash Rounds: 10000
+  Total Elements: 1024
+
+Timing:
+  Average: 4344.119 ms
+  Min: 4342.410 ms
+  Max: 4348.495 ms
+  Std Dev: 1.625 ms
+
+Throughput:
+  Elements/sec: 2.36e+06
+  Hash ops/sec: 2.36e+10
+============================================================
+```
+
 ## Cleanup
 
 ```bash
