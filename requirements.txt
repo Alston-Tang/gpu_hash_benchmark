@@ -1,0 +1,10 @@
+# Python dependencies for hw_benchmarks on AMD (ROCm) machines.
+#
+# Install PyTorch for ROCm:
+#   pip install torch --index-url https://download.pytorch.org/whl/rocm6.3
+#
+# Then install the remaining dependencies:
+#   pip install -r requirements.txt
+
+# triton is required for gpu_hash_benchmark.py (ships with PyTorch ROCm builds)
+triton
